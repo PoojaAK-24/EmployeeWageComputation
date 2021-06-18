@@ -6,6 +6,7 @@ FullTimeHr=8
 PartTimeHr=4
 SalaryPerHr=20
 totalSalary=0
+monthlySalary=0
 attendance=$((RANDOM%3))
 
 case $attendance in 
@@ -22,6 +23,8 @@ esac
 case $attendance in
 	1)
 	totalSalary=$(($totalSalary+($SalaryPerHr*$FullTimeHr)))
+	monthlySalary=$(($totalSalary*20))
+	echo "Monthly Salary: $monthlySalary"
         	;;
 	2)
         totalSalary=$(($totalSalary+($SalaryPerHr*$PartTimeHr)))
